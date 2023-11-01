@@ -1,13 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 
-function Home() {
+function Exp() {
   return (
     <div>
-      <h1>Hiee!</h1>
+      <h1>experience!</h1>
       
     </div>
   );
 }
 
-export default Home;
+export default Exp;
