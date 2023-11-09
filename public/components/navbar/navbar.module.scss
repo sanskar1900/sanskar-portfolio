@@ -1,0 +1,17 @@
+.root{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+}
+.flexRow20{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+// In a CSS or styled-components file
+ .root{
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  
