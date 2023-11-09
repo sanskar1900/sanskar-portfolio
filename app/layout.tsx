@@ -2,8 +2,10 @@ import Navbar from '@/public/components/navbar'
 import Footer from '@/public/components/navbar/footer'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-
-
+import { GlobalThemeProvider } from './context/store'
+import { useGlobalContext } from './context/store'
+import { useEffect } from 'react'
+import './globals.css';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -18,8 +20,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-    
-      <body className={inter.className}>{children}</body>
+      
+<body>
+<GlobalThemeProvider>
+    {children}
+    </GlobalThemeProvider>
+</body>
+   
+      
       
     </html>
   )

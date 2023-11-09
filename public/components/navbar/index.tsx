@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import classes from './navbar.module.scss';
+import { useGlobalContext } from '@/app/context/store';
 function Navbar() {
   const menuItem = [{name:"Home", route:'/'},{name :" Experience", route :'/experience'},{name:"Contact me", route:"/contact"}]
+  const { theme, setTheme } = useGlobalContext();
+  const changeTheme = ()=>{
+    if(theme==="light"){
+    setTheme("dark")}
+    else
+    {
+      setTheme("light");
+    }
+  }
   return (
     <div className={classes.root}>
       <div >
@@ -16,8 +26,8 @@ function Navbar() {
       })}
      </ul>
      </div>
-     <div>
-      Theme
+     <div onClick={changeTheme}>
+      {theme}
      </div>
     </div>
   );

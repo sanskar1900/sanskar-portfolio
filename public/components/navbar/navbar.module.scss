@@ -3,6 +3,10 @@
     justify-content: space-between;
     align-items: center;
     border: 1px solid black;
+   
+    top: 0px;
+    width: 100%;
+
 }
 .flexRow20{
     display: flex;
@@ -13,5 +17,11 @@
  .root{
     font-family: 'Poppins', sans-serif;
   }
-  
+.listItem{
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.listItem:hover{
+    transform: scale(1.2);
+}
   
