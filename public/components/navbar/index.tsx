@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import classes from './navbar.module.scss';
 import { useGlobalContext } from '@/app/context/store';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import NightlightRoundIcon from '@mui/icons-material/NightlightRound';
 function Navbar() {
   const menuItem = [{name:"Home", route:'/'},{name :" Experience", route :'/experience'},{name:"Contact me", route:"/contact"}]
   const { theme, setTheme } = useGlobalContext();
@@ -26,8 +28,8 @@ function Navbar() {
       })}
      </ul>
      </div>
-     <div onClick={changeTheme}>
-      {theme}
+     <div className={classes.theme} onClick={changeTheme}>
+      {theme==="light"?<NightlightRoundIcon/>:<LightModeIcon/>}
      </div>
     </div>
   );

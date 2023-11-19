@@ -7,18 +7,14 @@ import Layout from '@/public/components/Layout';
 import { themeReducer } from '@/src/themeReducer';
 import { useGlobalContext } from './context/store';
 import './globals.css';
+import Introduction from '@/public/components/Introduction';
 function Home() {
   const {theme, setTheme}= useGlobalContext();
-  useEffect(() => {
-    if (theme === 'dark') {
-      document.body.classList.add('dark-theme');
-    } else {
-      document.body.classList.remove('dark-theme');
-    }
-  }, [theme]);
   return (
 
-<Layout><h1>Hiee! {theme}</h1></Layout>
+<Layout>
+    <Introduction name='Sanskar Bhadauriya' designation='UI Engineer | MERN Developer'/>
+</Layout>
 
    
      

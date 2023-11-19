@@ -1,0 +1,17 @@
+.root{
+    height: 100px;
+    width: 100px;
+    border: 1px solid white;
+    position: absolute;
+    animation: slideDown 4s ease-in-out forwards;
+}
+@keyframes slideDown {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: 50vh;
+      
+    
+    }
+  }

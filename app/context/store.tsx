@@ -11,7 +11,7 @@ const ThemeContext = createContext<themeDataType>(
     }
 )
 export const GlobalThemeProvider = ({children}:{children: ReactNode})=>{
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState('dark');
     return(
        <ThemeContext.Provider value={{theme , setTheme}}>
   {children}
