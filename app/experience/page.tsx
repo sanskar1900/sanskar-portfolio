@@ -1,14 +1,27 @@
-import React from 'react';
-import Image from 'next/image';
-import Layout from '@/public/components/Layout';
+import React from "react";
+import Image from "next/image";
+import Layout from "@/public/components/Layout";
 
 function Exp() {
   return (
     <Layout>
-    <div>
-      <h1>experience!</h1>
-      
-    </div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <div
+          style={{
+            border: "0.1px solid white",
+            position: "absolute",
+            width: "80%",
+          }}
+        >
+          Experiencew
+        </div>
+      </div>
     </Layout>
   );
 }

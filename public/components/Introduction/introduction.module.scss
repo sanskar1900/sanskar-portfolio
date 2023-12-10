@@ -1,18 +1,26 @@
-.makeCenter{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
+.makeCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
 }
-.root{
-    @extend .makeCenter;
-    margin-top: 10vh;
-    font-family: 'Poppins', sans-serif;
+.root {
+  @extend .makeCenter;
+  margin-top: 10vh;
+  font-family: "Nunito", sans-serif;
 }
-.darkText{
-    color: #7b3f00;
+.darkText {
+  color: #7b3f00;
 }
-.lightText{
-    color: #c5c6d0;
+.lightText {
+  color: #c5c6d0;
+}
+.name {
+  font-size: 34px;
+  font-family: "Nunito" sans-serif;
+}
+.designation {
+  margin-top: 25px;
+  font-size: 20px;
 }

@@ -1,17 +1,30 @@
-.root{
-    height: 100px;
-    width: 100px;
-    border: 1px solid white;
-    position: absolute;
-    animation: slideDown 4s ease-in-out forwards;
+.root {
+  height: 100px;
+  width: 100px;
+  border: 1px solid white;
+  border-radius: 8px;
+  position: absolute;
+  animation: slideDown 0.8s ease-in-out forwards;
+  background-color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.label {
+  opacity: 0;
+}
+.root:hover {
+  transform: scale(1.2);
+}
+.root:hover .label {
+  opacity: 1;
 }
 @keyframes slideDown {
-    0% {
-      top: 0;
-    }
-    100% {
-      top: 50vh;
-      
-    
-    }
+  0% {
+    top: 0;
+    opacity: 0;
   }
+  100% {
+    top: 50vh;
+    opacity: 1;
+  }
+}
