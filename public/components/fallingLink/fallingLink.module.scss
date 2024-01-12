@@ -1,6 +1,6 @@
 .root {
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
   border: 1px solid white;
   border-radius: 8px;
   position: absolute;
@@ -24,7 +24,7 @@
     opacity: 0;
   }
   100% {
-    top: 50vh;
+    top: 85vh;
     opacity: 1;
   }
 }
