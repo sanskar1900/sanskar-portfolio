@@ -1,10 +1,10 @@
 .root {
-  height: 50px;
-  width: 50px;
+  height: 35px;
+  width: 35px;
   border: 1px solid white;
   border-radius: 8px;
-  position: absolute;
-  animation: slideDown 0.8s ease-in-out forwards;
+
+  animation: slideDown 2s ease-in-out forwards;
   background-color: white;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
@@ -20,11 +20,11 @@
 }
 @keyframes slideDown {
   0% {
-    top: 0;
+    top: 91vh;
     opacity: 0;
   }
   100% {
-    top: 85vh;
+    top: 91vh;
     opacity: 1;
   }
 }

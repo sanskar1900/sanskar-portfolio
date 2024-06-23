@@ -1,10 +1,12 @@
 import React from "react";
 import classes from "./profile.module.scss";
 import Image from "next/image";
+import FallingLink from "../fallingLink";
 interface profilDataType {
   data: any;
+  profileLinks: any;
 }
-const Profile = ({ data }: profilDataType) => {
+const Profile = ({ data, profileLinks }: profilDataType) => {
   const listItems = [
     { link: " sanskarbhadauriya567@gmail.com", id: 1 },
     { link: "+917983069494", id: 2 },
@@ -47,6 +49,17 @@ const Profile = ({ data }: profilDataType) => {
                 className={classes.listItem}
               >{`${data?.link}`}</div>
             </div>
+          );
+        })}
+      </div>
+      <div className={classes.profiles}>
+        {profileLinks.map((data: any) => {
+          return (
+            <FallingLink
+              link={data?.link}
+              logo={data?.imgUrl}
+              label={data?.label}
+            />
           );
         })}
       </div>

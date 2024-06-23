@@ -4,6 +4,7 @@ import classes from "./introduction.module.scss";
 import { useGlobalContext } from "@/app/context/store";
 import FallingLink from "../fallingLink";
 import Profile from "../profile";
+import Description from "../description";
 interface Introductionprops {
   name: string;
   designation: string;
@@ -32,21 +33,12 @@ const Introduction: React.FC<Introductionprops> = ({
     >
       <div className={classes.aboutMe}>
         <div className={classes.profile}>
-          <Profile data={profileData} />
+          <Profile data={profileData} profileLinks={profileLinks} />
         </div>
-        <div className={classes.desc}></div>
+        <div className={classes.desc}>
+          <Description />
+        </div>
       </div>
-
-      {profileLinks.map((data: any) => {
-        return (
-          <FallingLink
-            link={data?.link}
-            positionx={data?.left}
-            logo={data?.imgUrl}
-            label={data?.label}
-          />
-        );
-      })}
     </div>
   );
 };

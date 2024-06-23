@@ -35,12 +35,12 @@
 .desc {
   width: 70%;
 
-  height: 95vh;
+  min-height: 100vh;
   background-color: #1e1e1f;
 }
 .profile {
   width: 30%;
-  height: 100%;
+  min-height: 100vh;
 
   background-color: #1e1e1f;
 }
