@@ -1,15 +1,14 @@
-import { dialogClasses } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import classes from "./introduction.module.scss";
 import { useGlobalContext } from "@/app/context/store";
-import FallingLink from "../fallingLink";
-import Profile from "../profile";
 import Description from "../description";
+import Profile from "../profile";
 interface Introductionprops {
   name: string;
   designation: string;
   profileLinks: any;
   profilePicture: string;
+  sections: any[];
 }
 
 const Introduction: React.FC<Introductionprops> = ({
@@ -17,8 +16,8 @@ const Introduction: React.FC<Introductionprops> = ({
   designation,
   profileLinks,
   profilePicture,
+  sections,
 }) => {
-  const [displayedDesignation, setDisplayedDesignation] = useState("");
   const profileData = {
     profilePicture: profilePicture,
     name: name,
@@ -36,7 +35,7 @@ const Introduction: React.FC<Introductionprops> = ({
           <Profile data={profileData} profileLinks={profileLinks} />
         </div>
         <div className={classes.desc}>
-          <Description />
+          <Description sections={sections} />
         </div>
       </div>
     </div>

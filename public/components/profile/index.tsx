@@ -11,32 +11,37 @@ const Profile = ({ data, profileLinks }: profilDataType) => {
     { link: " sanskarbhadauriya567@gmail.com", id: 1 },
     { link: "+917983069494", id: 2 },
     { link: "LinkedIn", id: 3 },
-    { link: "GitHub", id: 3 },
-    { link: "LeetCode", id: 3 },
-    { link: "CodeChef", id: 3 },
-    { link: "Download Resume", id: 3 },
+    { link: "GitHub", id: 4 },
+    { link: "LeetCode", id: 5 },
+    { link: "CodeChef", id: 6 },
+    { link: "Download Resume", id: 7 },
   ];
+
   return (
     <div className={classes.root}>
-      <div className={classes.center}>
-        <div className={classes.img}>
-          <Image
-            src={require("../sanskar.jpeg")}
-            alt="profile"
-            height={150}
-            width={150}
-          />
+      <div className={classes.topSection}>
+        <div className={classes.center}>
+          <div className={classes.img}>
+            <Image
+              src={require("../sanskar.jpeg")}
+              alt="profile"
+              height={150}
+              width={150}
+            />
+          </div>
         </div>
-      </div>
-      <div className={classes.center}>
-        <div className={classes.name}>{data?.name}</div>
-      </div>
-      <div className={classes.center}>
-        <div className={classes.designation}>{data?.designation}</div>
-      </div>
-      <div className={classes.center}>
-        <div className={classes.designationLocation}>
-          {"📍 Bangalore, India"}
+        <div>
+          <div className={classes.center}>
+            <div className={classes.name}>{data?.name}</div>
+          </div>
+          <div className={classes.center}>
+            <div className={classes.designation}>{data?.designation}</div>
+          </div>
+          <div className={classes.center}>
+            <div className={classes.designationLocation}>
+              {"📍 Bangalore, India"}
+            </div>
+          </div>
         </div>
       </div>
       <div className={classes.list}>
@@ -52,6 +57,7 @@ const Profile = ({ data, profileLinks }: profilDataType) => {
           );
         })}
       </div>
+      <div className={classes.saperate}></div>
       <div className={classes.profiles}>
         {profileLinks.map((data: any) => {
           return (
