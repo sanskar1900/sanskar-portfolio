@@ -1,9 +1,15 @@
 .root {
-  padding: 20px;
+  height: fit-content;
 }
 .navbar {
   display: flex;
   gap: 20px;
+  height: 40px;
+  position: sticky;
+  top: 0px;
+  z-index: 200;
+  background-color: black;
+  padding: 20px;
 }
 .headingButton {
   color: #c5c6d0;
@@ -15,6 +21,7 @@
   border: none;
   cursor: pointer;
   font-weight: 600;
+  letter-spacing: 1px;
   @media screen and (max-width: 1024px) {
     font-size: 16px;
   }
@@ -23,7 +30,11 @@
   opacity: 1;
   @extend .headingButton;
   color: #ffdb70;
+  font-size: 22px;
+  letter-spacing: 2px;
 }
 .contentSection {
   margin-top: 20px;
+  padding: 20px;
+  height: 100% !important;
 }
