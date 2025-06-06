@@ -46,27 +46,32 @@ function Home() {
       heading: "Experience",
       values: [
         {
-          companyName: "BrightChamps",
-          designation: "Software Development Engineer -1",
+          companyName: "Allen DIGITAL",
+          designation: "Software Enginner",
           about: [
-            "Collaboratively spearheaded the development, maintenance, and release of multiple versions of BrightChamps student dashboard, teacher dashboard and website. working closely with a dynamic team to achieve project milestones and ensure seamless UX.",
-            "Conducted thorough code reviews, ensuring high-quality code, documentation, and collaborated with QA to write unit test cases for clean, readable, and testable web applications.",
-            "Implemented and maintained version control using Git and BitBucket, ensuring seamless collaboration within the development team and facilitating efficient code deployment processes.",
-            "Actively contributed to open source projects, demonstrating a commitment to community collaboration and innovation.",
+            "Designed and built multiple end-to-end UI flows, improving the platform's usability and engagement.",
+            "Improved website SEO by optimizing Next.js implementation and addressing key performance issues.",
+            "Optimized web performance by resolving key issues to enhance user experience and improve Core Web Vitals scores.",
+            "Developed and executed test cases using Jest to ensure feature reliability and maintainability.",
           ],
           techStack: ["JavaScript", "React.js", "Node.js", "Typescript", "GIT"],
           companyLogo:
-            "https://drive.google.com/file/d/1i7r6lum3y0LLZJXz6VW_mr7UDgsaG4h2/view?usp=drive_link",
+            "https://avatars.githubusercontent.com/u/124130617?s=200&v=4",
+          height: 60,
+          width: 60,
         },
         {
           companyName: "BrightChamps",
-          designation: "Software Development Intern",
+          designation: "SDE - 1",
           about: [
-            "Contributed significantly to the enhancement of BrightChamps website and student dashboard, utilizing React.js to improve both the user interface and functionality.",
+            "Built and maintained the BrightChamps website using React and JavaScript, improving dashboards, cutting load times by 15% and boosting user engagement.",
+            "Contributed to open source by developing a scheduling calendar to showcase class events in the teacher dashboard, improving the teacher’s experience and reducing the operations team’s manual work by 25%",
           ],
           techStack: ["JavaScript", "React.js", "BitBucket", "MUI"],
-          companyLogo:
-            "https://drive.google.com/file/d/1i7r6lum3y0LLZJXz6VW_mr7UDgsaG4h2/view?usp=drive_link",
+          companyLogo: " https://etimg.etb2bimg.com/photo/111753217.cms",
+
+          height: 60,
+          width: 120,
         },
         {
           companyName: "Masai School",

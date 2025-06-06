@@ -1,5 +1,6 @@
 import { url } from "inspector";
 import classes from "./experience.module.scss";
+import exp from "constants";
 type props = {
   experience: any[];
 };
@@ -10,17 +11,20 @@ const Experiece = ({ experience }: props) => {
         return (
           <div>
             <div className={classes.nameLogo}>
-              <a className={classes.name}>{experience.companyName}</a>
+              <a className={classes.name}>
+                {experience.companyName + ` (${experience.designation})`}
+              </a>
               <img
+                className={classes.company}
                 src={experience.companyLogo}
-                width={100}
-                height={40}
+                width={experience.width}
+                height={experience.height}
                 alt="logo"
               />
             </div>
             <div>
               {experience?.about.map((desc: string) => {
-                return <p className={classes.desc}>{`> ${desc}`}</p>;
+                return <p className={classes.desc}>{`👉 ${desc}`}</p>;
               })}
             </div>
           </div>

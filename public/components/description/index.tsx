@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import classes from "./description.module.scss";
 import Experiece from "../experience";
 type props = {
@@ -7,6 +7,27 @@ type props = {
 const Description = ({ sections }: props) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const selectedHeading = sections[selectedIndex].heading;
+  const sentinelRef = useRef<HTMLDivElement>(null);
+  const [isSticky, setIsSticky] = useState(false);
+  const navbarRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsSticky(!entry.isIntersecting); // When sentinel is out of view, navbar is stuck
+      },
+      { root: null, threshold: 0 }
+    );
+
+    if (sentinelRef.current) {
+      observer.observe(sentinelRef.current);
+    }
+
+    return () => {
+      if (sentinelRef.current) observer.unobserve(sentinelRef.current);
+    };
+  }, []);
+
   const handleChangeHeading = (index: number) => {
     if (index === selectedIndex) return;
     setSelectedIndex(index);
@@ -20,7 +41,10 @@ const Description = ({ sections }: props) => {
 
   return (
     <div className={classes.root}>
-      <div className={classes.navbar}>
+      <div ref={sentinelRef} style={{ height: 1 }} />
+      <div
+        className={`${classes.navbar} ${isSticky ? classes.stickyShadow : ""}`}
+      >
         {sections?.map((section: any, index: number) => {
           const isSelected = index === selectedIndex;
           return (

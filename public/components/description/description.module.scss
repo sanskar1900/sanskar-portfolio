@@ -8,30 +8,41 @@
   position: sticky;
   top: 0px;
   z-index: 200;
-  background-color: black;
   padding: 20px;
+  overflow: scroll;
+  background-color: #1e1e1f;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+.stickyShadow {
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+  border-radius: 0px;
 }
 .headingButton {
   color: #c5c6d0;
   padding: 0px;
+
   margin: 0px;
   opacity: 0.8;
-  font-size: 18px;
+  font-size: 16px;
   background: none;
   border: none;
   cursor: pointer;
   font-weight: 600;
   letter-spacing: 1px;
   @media screen and (max-width: 1024px) {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 .selectedHeadingButton {
   opacity: 1;
   @extend .headingButton;
   color: #ffdb70;
-  font-size: 22px;
+  font-size: 16px;
   letter-spacing: 2px;
+  @media screen and (max-width: 1024px) {
+    font-size: 12px;
+  }
 }
 .contentSection {
   margin-top: 20px;
